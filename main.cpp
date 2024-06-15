@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int myFunction(int x) {
-	int product = 1;
-	for (int i = 1; i <= x; i++)
+void SomeFunc(int number)
+{
+	int stop = number;
+	for (int i = 1; i < stop; i++)
 	{
-		product = product * i;
+		number *= i;
 	}
-	return product;
+	cout << number;
+	return;
 }
 
 int main() {
-	int variable = myFunction(5);
-	cout << variable;
+	SomeFunc(5);
 	return 0;
 }
