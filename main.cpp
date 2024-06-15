@@ -1,16 +1,14 @@
 #include <iostream>
 using namespace std;
 
-bool myFunction(float x) {
-	if (x > 0) {
-		return true;
-	}
-	else {
-		return false;
-	}
+void myFunction(int x) {
+	if (x > 0) cout << true;
+	else if (x == 0) cout << "0 has been entered";
+	else cout << false;
+	return;
 }
 
 int main() {
-	cout << myFunction(0);
+	myFunction(-7);
 	return 0;
 }
