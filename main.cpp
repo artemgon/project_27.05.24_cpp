@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int myFunction(int x) {
-	return x * x * x;
+void SomeFunc(int x)
+{
+	cout << x * x * x;
+	return;
 }
 
 int main() {
-	cout << myFunction(3);
+	SomeFunc(3);
 	return 0;
 }
