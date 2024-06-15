@@ -1,27 +1,20 @@
 #include <iostream>
 using namespace std;
 
-void myFunction(int N, int K) {
-	for (int i = 0; i < N; i++)
+void SomeFunc(int height, int width)
+{
+	for (int i = 0; i < height; i++)
 	{
-		cout << ".";
-	}
-	for (int i = 0; i < K; i++)
-	{
-		cout << "\n.";
-		for (int j = 0; j < N - 2; j++)
+		for (int j = 0; j < width; j++)
 		{
-			cout << " ";
+			cout << " " << "*";
 		}
-		cout << "." << endl;
+		cout << "\n\n";
 	}
-	for (int i = 0; i < N; i++)
-	{
-		cout << ".";
-	}
+	return;
 }
 
 int main() {
-	myFunction(30, 10);
+	SomeFunc(5, 5);
 	return 0;
-}
+} 
