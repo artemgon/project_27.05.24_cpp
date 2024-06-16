@@ -1,19 +1,27 @@
 #include <iostream>
 using namespace std;
-int sum = 0;
-int SomeFunc(int start, int end)
+
+void PerfNum(int number)
 {
-	//First variant
-	for (int i = start + 1; i < end; i++)
+	int sum = 0;
+	for (int i = 1; i < number; i++)
 	{
-		sum += i;
+		if (number % i == 0) sum += i;
 	}
-	//Second variant
-	//sum = ((start + 1) + (end - 1)) * ((end - 1) - (start+1) + 1) / 2; 
-	return sum;
+	if (sum == number) cout << number << " ";
+	return;
+}
+
+void NumCheck(int start, int end)
+{
+	for (int i = start; i <= end; i++)
+	{
+		PerfNum(i);
+	}
+	return;
 }
 
 int main() {
-	cout << SomeFunc(15, 30);
+	NumCheck(1, 500);
 	return 0;
 }
