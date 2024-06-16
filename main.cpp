@@ -1,16 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int myFunction(int x, int y) {
-	int power = 1;
-	for (int i = 1; i <= y; i++)
-	{
-		power = power * x;
-	}
-	return power;
+int SomeFunc(int base, int exponent) {
+	int key = 1;
+	for (int i = 0; i < exponent; i++)
+		key *= base;
+	return key;
 }
 
 int main() {
-	cout << myFunction(2, 5);
+	cout << SomeFunc(2, 5);
 	return 0;
 }
